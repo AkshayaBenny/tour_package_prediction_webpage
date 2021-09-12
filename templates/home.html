@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<style>
+body {
+        background-image: url("https://media.gettyimages.com/photos/young-casual-female-traveler-with-suitcase-at-airport-picture-id1200901287?k=20&m=1200901287&s=612x612&w=0&h=Tt103boUDzL2V3wICZNjbf2WYpNIuD83i-zbCXamXyI=");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<body >
+
+
+
+<h1 style="color: black;"><center><b> TOUR PACKAGE PREDICTION </b></center></h1>
+
+<form action="{% url 'result' %}" method="post">
+
+
+
+    {% csrf_token %}
+    
+ <center>
+        
+        <b>Customer ID:</b>               <input type='text'  name='customer_id'>                 <br> <br> 
+        <b>Age:</b>                      <input type='number'  name='age'>                         <br> <br>
+        <b>City Tier:</b>                  <select name='City Tier'> <option value='1'>Tier 1</option> <option value='2'>Tier 2</option> <option value='3'>Tier 3</option> </select> <br> <br>
+        <b>Duration Of Pitch:</b>          <input type='text'  name='Duration Of Pitch'>           <br> <br>
+        <b>Occupation:</b>                <select name='Occupation' > <option value='0'>Freelancer</option> <option value='1'>Large Business</option> <option value='2'>Salaried</option> <option value='3'>Small Business</option> </select> <br> <br>
+        <b>Gender:</b>                     <select name='Gender'> <option value='1'>Female</option> <option value='2'>Male</option> </select> <br> <br>
+        <b>Number Of Person Visiting:</b>  <input type='number'  name='no_person_visiting'>   <br> <br>
+        <b>Product Pitched:</b>            <select name='Product Pitched' ><option value='0'>Basic</option> <option value='1'>Deluxe</option> <option value='2'>King</option> <option value='3'>Standared</option> <option value='4'>Super Deluxe</option> </select> <br> <br>
+        <b>Preffered Property Star:</b>    <input type='text'  name='Preffered Property Star'>     <br> <br>
+        <b>Passport:</b>                   <select name='Passport'> <option value='0'>No</option> <option value='1'>Yes</option> </select> <br> <br>
+        <b>Own Vehicle:</b>                <select name='own_vehicle'> <option value='0'>No</option> <option value='1'>Yes</option> </select> <br> <br>
+        <b>Number of Children Visiting:</b> <input type='text'  name='Number Of Children Visiting'> <br> <br>
+        <b>Monthly Income:</b>             <input type='text'  name='Monthly Income'>              <br> <br>
+        
+        <input type='submit' name='submit' value='submit'>
+</center>
+        
+</form>
+
+    
+</body>
+</html>
